@@ -12,13 +12,13 @@ require "fonctions.php"; ?>
 <body>
     <div style="text-align: end;">
     <br />
-    <p class="headerLog"> <img src="assets/login.png"> <a href="connexion.php">Connexion</a> - <img src="assets/inscription.png"> <a href="inscription.php">Inscription</a> </p> 
+    <p class="headerLog"> <img src="assets/login.png" alt="login"> <a href="connexion.php">Connexion</a> - <img src="assets/inscription.png" alt="inscription"> <a href="inscription.php">Inscription</a> </p> 
     
     <?php
      if (isset($_SESSION['user'])==true) {
          echo "<br/><br/> <p class='headerLog'> <img src='assets/user.png'> Bonjour </p>".$_SESSION['user'];
          ?>
-         - <p class="headerLog"> <img src="assets/logout.png"> <a href="deconnexion.php">Déconnexion</a> - <img src="assets/userslist.png"> <a href="liste_utilisateur.php">Liste des utilisateurs</a></p>
+         - <p class="headerLog"> <img src="assets/logout.png" alt="logout"> <a href="deconnexion.php">Déconnexion</a> - <img src="assets/userslist.png" alt="userslist"> <a href="liste_utilisateur.php">Liste des utilisateurs</a></p>
          <?php
      }
      else {
