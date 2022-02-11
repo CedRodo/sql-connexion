@@ -71,3 +71,15 @@ h1 {
     background-color: rgba(0, 0, 0, 0.808);
     color: azure;
 }
+
+.headerLog {
+    display: inline;
+}
+
+.headerLog img {
+    position: relative; top: 2px;
+}
+
+.headerLog a {
+    text-decoration: none;
+}

@@ -6,23 +6,19 @@ require "fonctions.php"; ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Connexion/Déconnexion</title>
 </head>
 <body>
     <div style="text-align: end;">
     <br />
-    <a href="connexion.php">Connexion</a> - 
-
-    
-    
-    <a href="inscription.php">Inscription</a>  
+    <p class="headerLog"> <img src="assets/login.png"> <a href="connexion.php">Connexion</a> - <img src="assets/inscription.png"> <a href="inscription.php">Inscription</a> </p> 
     
     <?php
      if (isset($_SESSION['user'])==true) {
-         echo "<br/><br/>Bonjour ".htmlspecialchars($_SESSION['user']);
+         echo "<br/><br/> <p class='headerLog'> <img src='assets/user.png'> Bonjour </p>".$_SESSION['user'];
          ?>
-         - <a href="deconnexion.php">Déconnexion</a> - <a href="liste_utilisateur.php">Liste des utilisateurs</a>
+         - <p class="headerLog"> <img src="assets/logout.png"> <a href="deconnexion.php">Déconnexion</a> - <img src="assets/userslist.png"> <a href="liste_utilisateur.php">Liste des utilisateurs</a></p>
          <?php
      }
      else {

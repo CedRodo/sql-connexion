@@ -18,16 +18,17 @@ Supprimer un utilisateurs
 [13:47]
 Inscription / modification / suppression -->
 
-<?php require 'header.php' ?>
+<?php require 'header.php'; ?>
 <br/>
 <br/>
 <?php session_destroy(); ?>
+<?php if (isset($_COOKIE['pseudo'])==true) { $cookie = $_COOKIE['pseudo']; } ?>
 <h2 class="titrepage">Page de connexion</h2>
 
 <form class="formulaireLogin" method="POST" action="connexion.php">
 <fieldset>
     <legend>Entrez vos identifiants :</legend>
-        <p><label for="name">Votre nom : </label> <input type="text" placeholder="nom" name="name" id="name" /> <br />
+        <p><label for="name">Votre nom : </label> <input type="text" placeholder="nom" name="name" id="name" value="<?php if ($cookie!=null) { echo $cookie; } ?>"/> <br />
         <p><label for="password">Votre mot de passe : </label> <input type="password" placeholder="mot de passe" name="password" id="password" /> <br />
 </fieldset>
 <br/>    

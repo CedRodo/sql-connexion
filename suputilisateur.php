@@ -1,5 +1,3 @@
-Supprimer
-
 <?php require 'header.php';
 
 bd();

@@ -11,4 +11,6 @@ unset($_SESSION['user']);
 // session_destroy();
 ?>
 Vous êtes deconnecté...
+<br/>
+<p>Vous pouvez vous reconnecter <a href="connexion.php">ici</a></p>
 <?php include "footer.php"; ?>

@@ -12,5 +12,4 @@
 </fieldset>
 <br/>    
 <input type="submit" value="Envoyer" />
-</form>  
-<?php if (isset($_GET['id'])==true) { echo $_GET['id']; } ?>
+</form>

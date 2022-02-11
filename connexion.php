@@ -62,6 +62,17 @@ if (($nomUtilLog==$nomUtilTable) && ($mdpUtilLog==$mdpUtilTable)){
     // session_start();
     $_SESSION['user']=$nomUtilLog;
 }
+else if (($nomUtilLog==$nomUtilTable) && ($mdpUtilLog!=$mdpUtilTable)) {
+    echo '<br/><br/><p style="color: red;">Mot de passe invalide, connexion impossible.</p>';
+    echo "<br/><br/>"."Veuillez vous reconnecter ".' <button><a href="index.php" style="text-decoration: none;">Retour à la connexion</a></button>';
+    setcookie('pseudo',
+            $nomUtilLog,
+        [
+            'expires' => time() + 365*24*3600,
+            'secure' => true,
+            'httponly' => true,
+        ]);
+}    
 else {
     echo '<br/><br/><p style="color: red;">Nom et/ou Mot de passe invalide(s), connexion impossible.</p>';
     echo "<br/><br/>"."Veuillez vous reconnecter ".' <button><a href="index.php" style="text-decoration: none;">Retour à la connexion</a></button>';
